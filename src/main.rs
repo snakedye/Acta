@@ -1,5 +1,7 @@
 extern crate serenity;
+
 mod api;
+mod commands;
 
 use std::env;
 
