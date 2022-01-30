@@ -15,14 +15,3 @@ pub use serenity::{
     },
     model::prelude::*,
 };
-
-pub async fn name_to_channel_id(
-    ctx: &client::Context,
-    guild: &Guild,
-    msg: &Message,
-    name: &str
-) -> Option<UserId> {
-    name.parse::<UserId>()
-    .ok()
-    .filter(|id| id.0 > 10_000_000_000_000_000)
-}
